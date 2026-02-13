@@ -2,78 +2,116 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Octeel Games</title>
+<title>PartyHarvest - Octeel Games</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
     font-family:'Fredoka', sans-serif;
-    background: linear-gradient(#a8e6cf, #dcedc1);
+    background:#fdfdfd;
     text-align:center;
-    color:#2d3436;
-    overflow-x:hidden;
+    color:#333;
 }
 
 /* HERO */
-header{
-    padding:100px 20px;
+.hero{
+    height:90vh;
+    background:url('hero.png') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     position:relative;
 }
 
-h1{
+.overlay{
+    background:rgba(0,0,0,0.4);
+    padding:40px;
+    border-radius:25px;
+    color:white;
+}
+
+.overlay h1{
     font-size:60px;
     margin:0;
 }
 
-/* Walking Character */
-.character{
-    position:absolute;
-    bottom:10px;
-    left:-100px;
-    font-size:50px;
-    animation: walk 12s linear infinite;
+.overlay p{
+    font-size:22px;
 }
 
-@keyframes walk{
-    from { left:-100px; }
-    to { left:110%; }
+.button{
+    margin-top:20px;
+    padding:15px 30px;
+    background:#ffcc70;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-/* Section */
+.button:hover{
+    background:#ffb347;
+}
+
+/* SECTION */
 .section{
     padding:80px 20px;
 }
 
-.game-card{
-    background:white;
+iframe{
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ABOUT */
+.about{
     max-width:700px;
-    margin:30px auto;
+    margin:40px auto;
+    background:#fff;
     padding:30px;
     border-radius:25px;
     box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Gallery */
-.gallery{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
+footer{
+    padding:30px;
+    background:#81ecec;
 }
+</style>
+</head>
 
-.gallery img{
-    width:300px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-    transition:0.3s;
-}
+<body>
 
-.gallery img:hover{
-    transform:scale(1.05);
-}
+<div class="hero">
+    <div class="overlay">
+        <h1>PartyHarvest 🌽</h1>
+        <p>Grow crops. Play together. Party forever!</p>
+        <button class="button">Wishlist on Steam</button>
+    </div>
+</div>
 
-/* Trailer */
-iframe{
-    border-ra
+<div class="section">
+    <h2>🎬 Official Trailer</h2>
+    <iframe width="800" height="450"
+        src="https://www.youtube.com/embed/cIubERFNhh8"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
 
+<div class="section">
+    <h2>🌱 About Octeel Games</h2>
+    <div class="about">
+        <p>Octeel Games is an indie studio focused on colorful co-op farming adventures.</p>
+        <p>We create joyful multiplayer experiences that bring friends together.</p>
+    </div>
+</div>
+
+<footer>
+© 2026 Octeel Games • Made with 🌾 & 🎉
+</footer>
+
+</body>
+</html>
